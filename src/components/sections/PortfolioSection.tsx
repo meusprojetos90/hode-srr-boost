@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Eye, ExternalLink } from "lucide-react";
+import { X, ZoomIn } from "lucide-react";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 // Import portfolio images
 import pastaImage from "@/assets/portfolio-pasta.jpg";
@@ -15,69 +15,44 @@ import adsImage from "@/assets/portfolio-ads.jpg";
 const portfolioItems = [
   {
     id: 1,
-    title: "Fotografia Profissional - Bistrô Gourmet",
-    category: "Fotografia",
     image: pastaImage,
-    description: "Sessão fotográfica completa com 50+ imagens profissionais para cardápio e redes sociais",
-    results: "+180% engajamento",
-    tags: ["Food Photography", "Cardápio Digital", "Instagram"],
+    alt: "Fotografia Profissional - Bistrô Gourmet",
+    height: "h-80", // Different heights for masonry effect
   },
   {
     id: 2,
-    title: "Gestão Instagram - Cantina Italiana",
-    category: "Redes Sociais",
     image: instagramImage,
-    description: "Transformação completa do perfil com feed estratégico e conteúdo que converte",
-    results: "+300% seguidores",
-    tags: ["Instagram", "Feed Strategy", "Content Creation"],
+    alt: "Gestão Instagram - Cantina Italiana",
+    height: "h-96",
   },
   {
     id: 3,
-    title: "Campanha Tráfego Pago - Burger House",
-    category: "Tráfego Pago",
     image: burgerImage,
-    description: "Campanhas Facebook e Instagram Ads com foco em conversão e ROI otimizado",
-    results: "+250% pedidos",
-    tags: ["Facebook Ads", "Instagram Ads", "ROI"],
+    alt: "Campanha Tráfego Pago - Burger House",
+    height: "h-72",
   },
   {
     id: 4,
-    title: "Identidade Visual - Sushi Premium",
-    category: "Branding",
     image: brandingImage,
-    description: "Desenvolvimento completo de marca: logo, cartões, cardápio e materiais gráficos",
-    results: "Rebranding completo",
-    tags: ["Logo Design", "Brand Identity", "Print Design"],
+    alt: "Identidade Visual - Sushi Premium",
+    height: "h-88",
   },
   {
     id: 5,
-    title: "Produção de Conteúdo - Zen Sushi",
-    category: "Conteúdo",
     image: sushiImage,
-    description: "Banco de imagens exclusivo e conteúdo para redes sociais durante 6 meses",
-    results: "+400% alcance",
-    tags: ["Content Creation", "Photography", "Social Media"],
+    alt: "Produção de Conteúdo - Zen Sushi",
+    height: "h-80",
   },
   {
     id: 6,
-    title: "Campanhas Publicitárias - Rede de Restaurantes",
-    category: "Publicidade",
     image: adsImage,
-    description: "Múltiplas campanhas integradas para abertura de nova unidade",
-    results: "+500% awareness",
-    tags: ["Multi-platform", "Brand Awareness", "Launch Campaign"],
+    alt: "Campanhas Publicitárias - Rede de Restaurantes",
+    height: "h-96",
   },
 ];
 
-const categories = ["Todos", "Fotografia", "Redes Sociais", "Tráfego Pago", "Branding", "Conteúdo", "Publicidade"];
-
 export const PortfolioSection = () => {
-  const [activeCategory, setActiveCategory] = useState("Todos");
-  const [hoveredItem, setHoveredItem] = useState<number | null>(null);
-
-  const filteredItems = activeCategory === "Todos" 
-    ? portfolioItems 
-    : portfolioItems.filter(item => item.category === activeCategory);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
     <section className="py-20 bg-background">
@@ -96,88 +71,39 @@ export const PortfolioSection = () => {
           </p>
         </div>
 
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category) => (
-            <Button
-              key={category}
-              variant={activeCategory === category ? "gold" : "outline"}
-              onClick={() => setActiveCategory(category)}
-              className="transition-all duration-300"
-            >
-              {category}
-            </Button>
-          ))}
-        </div>
-
-        {/* Portfolio Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredItems.map((item) => (
-            <Card 
-              key={item.id}
-              className="group relative overflow-hidden hover:shadow-luxury transition-all duration-500 cursor-pointer"
-              onMouseEnter={() => setHoveredItem(item.id)}
-              onMouseLeave={() => setHoveredItem(null)}
-            >
-              <div className="relative overflow-hidden">
-                <img 
-                  src={item.image} 
-                  alt={item.title}
-                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                
-                {/* Overlay */}
-                <div className={`absolute inset-0 bg-gradient-overlay transition-opacity duration-300 ${
-                  hoveredItem === item.id ? 'opacity-90' : 'opacity-0'
-                }`}>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="flex gap-3">
-                      <Button size="icon" variant="gold" className="rounded-full">
-                        <Eye className="w-4 h-4" />
-                      </Button>
-                      <Button size="icon" variant="premium" className="rounded-full">
-                        <ExternalLink className="w-4 h-4" />
-                      </Button>
+        {/* Masonry Gallery */}
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+          {portfolioItems.map((item) => (
+            <Dialog key={item.id}>
+              <DialogTrigger asChild>
+                <div 
+                  className={`group relative overflow-hidden rounded-lg cursor-pointer break-inside-avoid mb-6 ${item.height}`}
+                >
+                  <img 
+                    src={item.image} 
+                    alt={item.alt}
+                    className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
+                  />
+                  
+                  {/* Hover Overlay */}
+                  <div className="absolute inset-0 bg-gradient-overlay opacity-0 group-hover:opacity-80 transition-opacity duration-300 flex items-center justify-center">
+                    <div className="bg-gold/20 backdrop-blur-sm rounded-full p-4 transform scale-75 group-hover:scale-100 transition-transform duration-300">
+                      <ZoomIn className="w-8 h-8 text-primary-foreground" />
                     </div>
                   </div>
                 </div>
-
-                {/* Category Badge */}
-                <div className="absolute top-4 left-4">
-                  <Badge variant="gold" className="text-xs">
-                    {item.category}
-                  </Badge>
+              </DialogTrigger>
+              
+              <DialogContent className="max-w-4xl w-[90vw] h-[90vh] p-0 bg-primary/95 border-gold/20">
+                <div className="relative w-full h-full flex items-center justify-center">
+                  <img 
+                    src={item.image} 
+                    alt={item.alt}
+                    className="max-w-full max-h-full object-contain"
+                  />
                 </div>
-
-                {/* Results Badge */}
-                <div className="absolute top-4 right-4">
-                  <Badge variant="outline" className="bg-primary-foreground/90 text-primary border-gold">
-                    {item.results}
-                  </Badge>
-                </div>
-              </div>
-
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-gold transition-colors">
-                  {item.title}
-                </h3>
-                <p className="text-muted-foreground mb-4 leading-relaxed">
-                  {item.description}
-                </p>
-                
-                <div className="flex flex-wrap gap-2">
-                  {item.tags.map((tag, tagIndex) => (
-                    <Badge 
-                      key={tagIndex} 
-                      variant="outline" 
-                      className="text-xs bg-muted hover:bg-gold/10 hover:border-gold transition-colors"
-                    >
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+              </DialogContent>
+            </Dialog>
           ))}
         </div>
 
