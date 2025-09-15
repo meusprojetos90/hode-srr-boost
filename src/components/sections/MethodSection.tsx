@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, ArrowRight, Zap, Camera, Target, TrendingUp } from "lucide-react";
+import { CheckCircle, ArrowDown, Zap, Camera, Target, TrendingUp } from "lucide-react";
 
 const methodSteps = [
   {
@@ -100,7 +100,7 @@ export const MethodSection = () => {
               {/* Arrow */}
               {index < methodSteps.length - 1 && (
                 <div className="flex justify-center my-4">
-                  <ArrowRight className="w-8 h-8 text-gold" />
+                  <ArrowDown className="w-8 h-8 text-gold" />
                 </div>
               )}
             </div>

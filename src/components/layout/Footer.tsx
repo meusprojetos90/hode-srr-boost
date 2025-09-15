@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Instagram, MessageCircle, Mail, MapPin, Phone } from "lucide-react";
+import LogoHode from "@/assets/Logo-Hode.png";
 
 export const Footer = () => {
   return (
@@ -9,30 +10,18 @@ export const Footer = () => {
           {/* Logo & Description */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-gold rounded-lg flex items-center justify-center">
-                <span className="font-bold text-primary text-lg">H</span>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-gold">Hode</h3>
-                <p className="text-sm text-primary-foreground/70">Soluções & Inovações</p>
-              </div>
+              <img 
+                  src={LogoHode} 
+                  alt="Logo Hode - Soluções e Inovações Tecnológicas" 
+                  className="w-40 h-full object-cover transition-all duration-500 group-hover:scale-105 rounded-2xl"
+                />
             </div>
             <p className="text-primary-foreground/80 leading-relaxed">
               Transformamos restaurantes em marcas irresistíveis e rentáveis através 
               do nosso exclusivo Método SRR.
             </p>
             
-            <div className="flex gap-4">
-              <Button variant="ghost" size="icon" className="text-primary-foreground hover:text-gold hover:bg-gold/10">
-                <Instagram className="w-5 h-5" />
-              </Button>
-              <Button variant="ghost" size="icon" className="text-primary-foreground hover:text-gold hover:bg-gold/10">
-                <MessageCircle className="w-5 h-5" />
-              </Button>
-              <Button variant="ghost" size="icon" className="text-primary-foreground hover:text-gold hover:bg-gold/10">
-                <Mail className="w-5 h-5" />
-              </Button>
-            </div>
+
           </div>
           
           {/* Contact Info */}
@@ -43,21 +32,21 @@ export const Footer = () => {
                 <MessageCircle className="w-5 h-5 text-gold" />
                 <div>
                   <span className="block text-primary-foreground/90">WhatsApp</span>
-                  <span className="text-sm text-primary-foreground/70">(11) 99999-9999</span>
+                  <span className="text-sm text-primary-foreground/70">(45) 9 8429-5124</span>
                 </div>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-gold" />
                 <div>
                   <span className="block text-primary-foreground/90">Email</span>
-                  <span className="text-sm text-primary-foreground/70">contato@hode.com.br</span>
+                  <span className="text-sm text-primary-foreground/70">maiarafra@hode.com.br</span>
                 </div>
               </div>
               <div className="flex items-center gap-3">
                 <Instagram className="w-5 h-5 text-gold" />
                 <div>
                   <span className="block text-primary-foreground/90">Instagram</span>
-                  <span className="text-sm text-primary-foreground/70">@hode.solucoes</span>
+                  <span className="text-sm text-primary-foreground/70">@hodemkt</span>
                 </div>
               </div>
             </div>
@@ -70,8 +59,15 @@ export const Footer = () => {
               Transforme seu restaurante em uma marca de sucesso hoje mesmo.
             </p>
             <Button variant="gold" className="w-full">
-              <MessageCircle className="w-4 h-4 mr-2" />
-              Chamar no WhatsApp
+              <a 
+                href="https://wa.me/5545984295124?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20minha%20consultoria%20gratuita" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center justify-center w-full"
+              >
+                <MessageCircle className="w-4 h-4 mr-2" />
+                Chamar no WhatsApp
+              </a>
             </Button>
           </div>
         </div>
@@ -80,12 +76,8 @@ export const Footer = () => {
         <div className="border-t border-primary-foreground/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-primary-foreground/70 text-sm">
-              © 2024 Hode Soluções e Inovações Tecnológicas. Todos os direitos reservados.
+              © 2025 Hode Soluções e Inovações Tecnológicas. Todos os direitos reservados.
             </p>
-            <div className="flex items-center gap-6 text-sm text-primary-foreground/70">
-              <a href="#" className="hover:text-gold transition-colors">Política de Privacidade</a>
-              <a href="#" className="hover:text-gold transition-colors">Termos de Uso</a>
-            </div>
           </div>
         </div>
       </div>

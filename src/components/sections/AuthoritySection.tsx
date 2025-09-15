@@ -1,6 +1,8 @@
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Award, TrendingUp } from "lucide-react";
 
+import MaiaraFra from "@/assets/maiara-fra.jpg";
+
 export const AuthoritySection = () => {
   return (
     <section className="py-20 bg-muted">
@@ -10,12 +12,11 @@ export const AuthoritySection = () => {
           <div className="relative">
             <div className="w-full max-w-md mx-auto aspect-square bg-gradient-gold rounded-2xl shadow-luxury p-1">
               <div className="w-full h-full bg-card rounded-xl flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-32 h-32 bg-gold/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <Award className="w-16 h-16 text-gold" />
-                  </div>
-                  <p className="text-muted-foreground">Foto da Maiara Fra</p>
-                </div>
+                <img 
+                  src={MaiaraFra} 
+                  alt="Maiara Fra" 
+                  className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 rounded-2xl"
+                />
               </div>
             </div>
             

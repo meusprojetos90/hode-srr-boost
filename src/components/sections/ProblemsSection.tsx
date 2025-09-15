@@ -41,7 +41,7 @@ export const ProblemsSection = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Seu restaurante está
-            <span className="text-destructive block">perdendo clientes</span>
+            <span className="text-gold block">perdendo clientes</span>
             <span className="block">todos os dias?</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -52,10 +52,10 @@ export const ProblemsSection = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {problems.map((problem, index) => (
-            <Card key={index} className="group hover:shadow-dark transition-all duration-300 border-2 hover:border-destructive/20">
+            <Card key={index} className="group hover:shadow-dark transition-all duration-300 border-2 hover:border-gold/20">
               <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-destructive/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-destructive/20 transition-colors">
-                  <problem.icon className="w-8 h-8 text-destructive" />
+                <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-gold/20 transition-colors">
+                  <problem.icon className="w-8 h-8 text-gold" />
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-3">
                   {problem.title}
@@ -69,8 +69,8 @@ export const ProblemsSection = () => {
         </div>
         
         <div className="text-center mt-16">
-          <div className="bg-destructive/10 border border-destructive/20 rounded-lg p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-destructive mb-4">
+          <div className="bg-gold/10 border border-gold/20 rounded-lg p-8 max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold text-gold mb-4">
               Resultado: Potencial desperdiçado e receita perdida
             </h3>
             <p className="text-lg text-muted-foreground">

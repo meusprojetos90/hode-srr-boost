@@ -31,8 +31,7 @@ export const HeroSection = () => {
           {/* Main Headline */}
           <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
             Transforme o seu restaurante em uma
-            <span className="text-gold block">marca irresistível</span>
-            <span className="block">e rentável</span>
+            <span className="text-gold block">marca irresistível e rentável</span>
           </h1>
           
           {/* Subheadline */}
@@ -48,8 +47,15 @@ export const HeroSection = () => {
               size="xl"
               className="animate-gold-pulse hover:animate-none"
             >
+              <a 
+                href="https://wa.me/5545984295124?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20minha%20consultoria%20gratuita?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20minha%20consultoria%20gratuita" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center justify-center w-full"
+              >
               Agende seu diagnóstico gratuito
               <ArrowRight className="w-6 h-6 ml-2" />
+              </a>
             </Button>
           </div>
           

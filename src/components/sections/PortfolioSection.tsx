@@ -5,50 +5,36 @@ import { X, ZoomIn } from "lucide-react";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 // Import portfolio images
-import pastaImage from "@/assets/portfolio-pasta.jpg";
-import instagramImage from "@/assets/portfolio-instagram.jpg";
-import burgerImage from "@/assets/portfolio-burger.jpg";
-import brandingImage from "@/assets/portfolio-branding.jpg";
-import sushiImage from "@/assets/portfolio-sushi.jpg";
-import adsImage from "@/assets/portfolio-ads.jpg";
+import port01 from "@/assets/WhatsApp Image 2025-09-15 at 11.09.24.jpeg";
+import port02 from "@/assets/493225387_999521952361741_3544196573852622498_n.jpg";
+import port03 from "@/assets/WhatsApp Image 2025-09-15 at 11.10.05.jpeg";
+import port04 from "@/assets/524313383_1330513898642270_3518510657312413185_n.jpeg";
 
 const portfolioItems = [
   {
     id: 1,
-    image: pastaImage,
+    image: port01,
     alt: "Fotografia Profissional - Bistrô Gourmet",
     height: "h-80", // Different heights for masonry effect
   },
   {
     id: 2,
-    image: instagramImage,
-    alt: "Gestão Instagram - Cantina Italiana",
-    height: "h-96",
+    image: port02,
+    alt: "Fotografia Profissional - Bistrô Gourmet",
+    height: "h-64", // Different heights for masonry effect
   },
   {
     id: 3,
-    image: burgerImage,
-    alt: "Campanha Tráfego Pago - Burger House",
-    height: "h-72",
+    image: port03,
+    alt: "Fotografia Profissional - Bistrô Gourmet",
+    height: "h-72", // Different heights for masonry effect
   },
   {
     id: 4,
-    image: brandingImage,
-    alt: "Identidade Visual - Sushi Premium",
-    height: "h-88",
-  },
-  {
-    id: 5,
-    image: sushiImage,
-    alt: "Produção de Conteúdo - Zen Sushi",
-    height: "h-80",
-  },
-  {
-    id: 6,
-    image: adsImage,
-    alt: "Campanhas Publicitárias - Rede de Restaurantes",
-    height: "h-96",
-  },
+    image: port04,
+    alt: "Fotografia Profissional - Bistrô Gourmet",
+    height: "h-64", // Different heights for masonry effect
+  }
 ];
 
 export const PortfolioSection = () => {
@@ -109,7 +95,7 @@ export const PortfolioSection = () => {
 
         {/* CTA Section */}
         <div className="text-center mt-16">
-          <div className="bg-gradient-gold rounded-lg p-8 max-w-4xl mx-auto shadow-gold">
+          <div className="bg-gold rounded-lg p-8 max-w-4xl mx-auto shadow-gold">
             <h3 className="text-2xl font-bold text-primary mb-4">
               Seu Restaurante Pode Ser o Próximo Case de Sucesso
             </h3>
@@ -117,7 +103,14 @@ export const PortfolioSection = () => {
               Vamos criar um portfólio único que posicione sua marca como referência no mercado gastronômico
             </p>
             <Button variant="premium" size="lg">
+              <a 
+                href="https://wa.me/5545984295124?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20minha%20consultoria%20gratuita" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center justify-center w-full"
+              >
               Solicitar Orçamento Personalizado
+              </a>
             </Button>
           </div>
         </div>

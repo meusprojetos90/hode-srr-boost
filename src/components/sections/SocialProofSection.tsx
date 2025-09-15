@@ -9,21 +9,7 @@ const testimonials = [
     content: "A Hode transformou completamente nosso restaurante. Em 3 meses, aumentamos 180% nas reservas e o faturamento cresceu 120%. O Método SRR realmente funciona!",
     rating: 5,
     results: "+180% reservas",
-  },
-  {
-    name: "Ana Paula",
-    restaurant: "Cantina Italiana", 
-    content: "Nunca imaginei que marketing digital pudesse fazer tanta diferença. Nosso Instagram explodiu e hoje temos fila de espera todos os fins de semana!",
-    rating: 5,
-    results: "+300% seguidores",
-  },
-  {
-    name: "Roberto Santos",
-    restaurant: "Churrascaria Premium",
-    content: "Profissionalismo e resultados excepcionais. A equipe da Hode entende de verdade o mercado gastronômico. Recomendo para qualquer restaurante que quer crescer.",
-    rating: 5,
-    results: "+250% alcance",
-  },
+  }
 ];
 
 const stats = [
@@ -79,7 +65,7 @@ export const SocialProofSection = () => {
           </div>
         </div>
         
-        {/* Testimonials */}
+        {/* Testimonials 
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="relative bg-card hover:shadow-luxury transition-all duration-300">
@@ -110,6 +96,7 @@ export const SocialProofSection = () => {
             </Card>
           ))}
         </div>
+        */}
         
         {/* Before/After Section */}
         <div className="bg-primary text-primary-foreground rounded-2xl p-8 md:p-12">
@@ -155,7 +142,7 @@ export const SocialProofSection = () => {
               <ul className="space-y-3 text-left">
                 <li className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-gold rounded-full"></div>
-                  <span>Crescimento orgânico e engajamento real</span>
+                  <span>Crescimento e engajamento real</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-gold rounded-full"></div>
@@ -167,7 +154,7 @@ export const SocialProofSection = () => {
                 </li>
                 <li className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-gold rounded-full"></div>
-                  <span>Crescimento consistente e previsível</span>
+                  <span>Crescimento consistente</span>
                 </li>
               </ul>
             </div>

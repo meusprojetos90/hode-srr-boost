@@ -50,8 +50,15 @@ export const CTASection = () => {
             size="xl"
             className="animate-gold-pulse hover:animate-none text-xl px-12 py-6"
           >
+            <a 
+                href="https://wa.me/5545984295124?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20minha%20consultoria%20gratuita" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center justify-center w-full"
+              >
             Agendar diagnóstico gratuito
             <ArrowRight className="w-6 h-6 ml-2" />
+            </a>
           </Button>
         </div>
         
@@ -70,7 +77,7 @@ export const CTASection = () => {
         {/* Urgency */}
         <div className="mt-8">
           <p className="text-primary-foreground/70 text-sm">
-            ⚡ Atendemos apenas 10 novos clientes por mês para garantir qualidade máxima
+            ⚡ Atendemos apenas 3 novos clientes por mês para garantir qualidade máxima
           </p>
         </div>
       </div>
