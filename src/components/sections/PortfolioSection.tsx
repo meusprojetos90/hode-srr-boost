@@ -9,6 +9,17 @@ import port01 from "@/assets/WhatsApp Image 2025-09-15 at 11.09.24.jpeg";
 import port02 from "@/assets/493225387_999521952361741_3544196573852622498_n.jpg";
 import port03 from "@/assets/WhatsApp Image 2025-09-15 at 11.10.05.jpeg";
 import port04 from "@/assets/524313383_1330513898642270_3518510657312413185_n.jpeg";
+import port05 from "@/assets/515261285_122134561562646294_3884133212634150045_n.jpg";
+import port06 from "@/assets/525227038_1245353010163870_7484726853868161054_n.jpeg";
+import port07 from "@/assets/527491329_640588108505784_2579422754669706461_n.jpeg";
+import port08 from "@/assets/538707630_1260898365720215_8403619512964912049_n.jpeg";
+import port09 from "@/assets/541927328_18480709543072631_5699123533142402201_n.jpeg";
+import port10 from "@/assets/524313383_1330513898642270_3518510657312413185_n.jpeg";
+import port11 from "@/assets/524313383_1330513898642270_3518510657312413185_n.jpeg";
+import port12 from "@/assets/524313383_1330513898642270_3518510657312413185_n.jpeg";
+import port13 from "@/assets/524313383_1330513898642270_3518510657312413185_n.jpeg";
+import port14 from "@/assets/524313383_1330513898642270_3518510657312413185_n.jpeg";
+import port15 from "@/assets/524313383_1330513898642270_3518510657312413185_n.jpeg";
 
 const portfolioItems = [
   {
@@ -32,6 +43,48 @@ const portfolioItems = [
   {
     id: 4,
     image: port04,
+    alt: "Fotografia Profissional - Bistrô Gourmet",
+    height: "h-64", // Different heights for masonry effect
+  },
+  {
+    id: 5,
+    image: port05,
+    alt: "Fotografia Profissional - Bistrô Gourmet",
+    height: "h-64", // Different heights for masonry effect
+  },
+  {
+    id: 6,
+    image: port06,
+    alt: "Fotografia Profissional - Bistrô Gourmet",
+    height: "h-64", // Different heights for masonry effect
+  },
+  {
+    id: 7,
+    image: port07,
+    alt: "Fotografia Profissional - Bistrô Gourmet",
+    height: "h-64", // Different heights for masonry effect
+  },
+  {
+    id: 8,
+    image: port08,
+    alt: "Fotografia Profissional - Bistrô Gourmet",
+    height: "h-64", // Different heights for masonry effect
+  },
+  {
+    id: 9,
+    image: port09,
+    alt: "Fotografia Profissional - Bistrô Gourmet",
+    height: "h-64", // Different heights for masonry effect
+  },
+  {
+    id: 10,
+    image: port10,
+    alt: "Fotografia Profissional - Bistrô Gourmet",
+    height: "h-64", // Different heights for masonry effect
+  },
+  {
+    id: 11,
+    image: port11,
     alt: "Fotografia Profissional - Bistrô Gourmet",
     height: "h-64", // Different heights for masonry effect
   }
