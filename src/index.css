@@ -8,35 +8,55 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
+    /* Premium Gastronomy Design System */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    --foreground: 0 0% 0%;
+    
+    /* Premium Black & Gold Palette */
+    --primary: 0 0% 0%;
+    --primary-foreground: 0 0% 100%;
+    
+    --gold: 45 100% 51%;
+    --gold-light: 45 100% 65%;
+    --gold-dark: 45 100% 35%;
+    
+    --secondary: 0 0% 8%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 25%;
+    
+    --accent: 45 100% 51%;
+    --accent-foreground: 0 0% 0%;
+    
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --card-foreground: 0 0% 0%;
+    
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 0 0% 0%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 45 100% 51%;
+    
+    /* Premium Gradients */
+    --gradient-gold: linear-gradient(135deg, hsl(var(--gold-light)), hsl(var(--gold-dark)));
+    --gradient-dark: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    --gradient-overlay: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4));
+    
+    /* Luxury Shadows */
+    --shadow-gold: 0 10px 40px hsla(var(--gold), 0.3);
+    --shadow-dark: 0 20px 60px hsla(var(--primary), 0.4);
+    --shadow-luxury: 0 25px 80px hsla(var(--primary), 0.2);
+    
+    /* Smooth Transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-gold: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -92,6 +112,22 @@ All colors MUST be HSL.
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+}
+
+/* Premium Animations */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gold-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 hsla(var(--gold), 0.4); }
+  50% { box-shadow: 0 0 0 20px hsla(var(--gold), 0); }
 }
 
 @layer base {

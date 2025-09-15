@@ -27,6 +27,11 @@ export default {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
         },
+        gold: {
+          DEFAULT: "hsl(var(--gold))",
+          light: "hsl(var(--gold-light))",
+          dark: "hsl(var(--gold-dark))",
+        },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
@@ -84,6 +89,23 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in": "fade-in 0.8s ease-out",
+        "slide-up": "slide-up 0.6s ease-out",
+        "gold-pulse": "gold-pulse 2s ease-in-out infinite",
+      },
+      backgroundImage: {
+        "gradient-gold": "var(--gradient-gold)",
+        "gradient-dark": "var(--gradient-dark)",
+        "gradient-overlay": "var(--gradient-overlay)",
+      },
+      boxShadow: {
+        "gold": "var(--shadow-gold)", 
+        "dark": "var(--shadow-dark)",
+        "luxury": "var(--shadow-luxury)",
+      },
+      transitionProperty: {
+        "smooth": "var(--transition-smooth)",
+        "gold": "var(--transition-gold)",
       },
     },
   },
