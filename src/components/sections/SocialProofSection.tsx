@@ -15,12 +15,12 @@ const testimonials = [
 const stats = [
   {
     icon: Users,
-    number: "500+",
+    number: "30+",
     label: "Restaurantes transformados",
   },
   {
     icon: TrendingUp,
-    number: "300%",
+    number: "800%",
     label: "Aumento médio no alcance",
   },
   {
@@ -45,7 +45,7 @@ export const SocialProofSection = () => {
             Resultados Comprovados
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Nossos clientes
+            Nossos resultados
             <span className="text-gold block">falam por nós</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12">

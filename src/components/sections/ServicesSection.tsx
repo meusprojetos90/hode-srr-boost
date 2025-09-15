@@ -66,8 +66,8 @@ const services = [
   {
     icon: IfoodIcon,
     title: "IFood",
-    description: "Acompanhamento detalhado dos resultados com dados claros sobre ROI e performance.",
-    features: ["Dashboard exclusivo", "Métricas detalhadas", "Relatórios mensais"],
+    description: "Gestão estratégica da sua presença no IFood para aumentar pedidos, avaliações positivas e rentabilidade.",
+    features: ["Organização", "Fotos atrativas", "Descrições que convertem"],
   },
 ];
 

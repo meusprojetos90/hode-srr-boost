@@ -63,7 +63,7 @@ export const HeroSection = () => {
           <div className="flex items-center justify-center gap-8 text-primary-foreground/80 text-sm">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-gold rounded-full"></div>
-              <span>+500 restaurantes transformados</span>
+              <span>+ de R$ 200.000,00 investido em trafego pago</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-gold rounded-full"></div>

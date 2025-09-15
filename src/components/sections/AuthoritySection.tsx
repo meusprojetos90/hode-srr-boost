@@ -54,11 +54,11 @@ export const AuthoritySection = () => {
               </div>
               <div className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-gold" />
-                <span className="text-foreground">Mentoria com grandes nomes do setor</span>
+                <span className="text-foreground">Mentorada por grandes nomes do setor</span>
               </div>
               <div className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-gold" />
-                <span className="text-foreground">+500 restaurantes transformados</span>
+                <span className="text-foreground">+ de R$ 200.000,00 investido em trafego pago</span>
               </div>
             </div>
             
