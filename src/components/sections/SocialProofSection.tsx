@@ -25,8 +25,8 @@ const stats = [
   },
   {
     icon: Target,
-    number: "150%",
-    label: "Crescimento em vendas",
+    number: "R$ 0,06",
+    label: "Media de custo de visita ao perfil",
   },
   {
     icon: Star,

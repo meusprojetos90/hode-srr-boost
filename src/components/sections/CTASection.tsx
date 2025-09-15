@@ -15,8 +15,7 @@ export const CTASection = () => {
         
         <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
           Seu restaurante pode ser
-          <span className="text-gold block">SEXY, RENTÁVEL</span>
-          <span className="block">e RECONHECIDO</span>
+          <span className="text-gold block">Sexy, Rentável e Reconhecido</span>
         </h2>
         
         <p className="text-xl md:text-2xl text-primary-foreground/80 mb-8 leading-relaxed">
