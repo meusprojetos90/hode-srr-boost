@@ -1,39 +1,38 @@
-# ===== Etapa 1: Build =====
-FROM node:18-bullseye AS build
+# ----------------------------
+# Etapa 1: Build do projeto
+# ----------------------------
+FROM node:20-alpine AS builder
 
-# Instala Bun
-RUN curl -fsSL https://bun.sh/install | bash
-
-# Adiciona Bun ao PATH
-ENV PATH="/root/.bun/bin:$PATH"
-
-# Cria diretório da aplicação
+# Diretório de trabalho
 WORKDIR /app
 
-# Copia package.json e bun.lockb (ou package-lock.json/yarn.lock)
+# Copiar package.json e package-lock.json
 COPY package*.json ./
-COPY bun.lockb* ./
 
-# Instala dependências
-RUN bun install
+# Instalar dependências
+RUN npm install --frozen-lockfile
 
-# Copia o restante do código
+# Copiar o restante do código
 COPY . .
 
-# Build da aplicação
-RUN bun run build
+# Build do projeto (ajuste se for Flutter web, Node backend ou outro)
+RUN npm run build
 
-# ===== Etapa 2: Runtime =====
-FROM caddy:2.7.4-alpine
+# ----------------------------
+# Etapa 2: Container final
+# ----------------------------
+FROM node:20-alpine
 
-# Copia build final
-COPY --from=build /app/dist /srv
+WORKDIR /app
 
-# Copia Caddyfile para configuração do servidor
-COPY Caddyfile /etc/caddy/Caddyfile
+# Copiar dependências do builder
+COPY --from=builder /app/node_modules ./node_modules
 
-# Porta padrão
-EXPOSE 80
+# Copiar build final
+COPY --from=builder /app ./
 
-# Inicia Caddy
-CMD ["caddy", "run", "--config", "/etc/caddy/Caddyfile", "--adapter", "caddyfile"]
+# Expõe porta do app
+EXPOSE 3000
+
+# Comando para iniciar o app
+CMD ["npm", "start"]
