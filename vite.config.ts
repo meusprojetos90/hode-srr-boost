@@ -8,6 +8,7 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: Number(process.env.PORT) || 3000,
+    allowedHosts: ['hode.com.br', 'localhost']
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
